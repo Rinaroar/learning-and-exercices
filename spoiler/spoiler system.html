@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spoiler</title>
+
+
+    <style>
+        .spoiler-content {
+            display : inline-block;
+            width: 0;
+            height : 0;
+            opacity: 0;
+            overflow : hidden; /** Permet de cacher ce qu'il y autour de l'élement sinon comme si avait sauté des lignes **/
+            transition: opacity 0.5s;
+        }
+        .spoiler-content.visible {
+            display : inline;
+            width : auto;
+            height: auto;
+            opacity: 1;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+
+<p class = "spoiler">
+    Monsieur X meur à la fin
+
+   <!-- <button> Afficher le spoiler </button>
+    <span class="spoiler-content"> Monsieur X meurt à la fin ! </span>, code initial pour un seul élèment, alors que au dessous généralisé pour d'autres mots  -->
+</p>
+
+<p>
+    <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </span>
+    <span> Lorem ipsum dolor sit amet, <span class="spoiler">consectetur adipiscing elit</span> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </span>
+    <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </span>
+</p>
+
+
+<script src="spoiler.js"></script>
+
+
+</body>
+</html>
